@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Opponent
+
+# Model Form Field configuration
+form: $/kami/esport/models/opponent/fields.yaml
+
+# Model Class name
+modelClass: Kami\Esport\Models\Opponent
+
+# Default redirect location
+defaultRedirect: kami/esport/opponents
+
+# Create page
+create:
+    title: Create Opponent
+    redirect: kami/esport/opponents/update/:id
+    redirectClose: kami/esport/opponents
+
+# Update page
+update:
+    title: Edit Opponent
+    redirect: kami/esport/opponents
+    redirectClose: kami/esport/opponents
+
+# Preview page
+preview:
+    title: Preview Opponent

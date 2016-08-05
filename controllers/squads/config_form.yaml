@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Squad
+
+# Model Form Field configuration
+form: $/kami/esport/models/squad/fields.yaml
+
+# Model Class name
+modelClass: Kami\Esport\Models\Squad
+
+# Default redirect location
+defaultRedirect: kami/esport/squads
+
+# Create page
+create:
+    title: Create Squad
+    redirect: kami/esport/squads/update/:id
+    redirectClose: kami/esport/squads
+
+# Update page
+update:
+    title: Edit Squad
+    redirect: kami/esport/squads
+    redirectClose: kami/esport/squads
+
+# Preview page
+preview:
+    title: Preview Squad

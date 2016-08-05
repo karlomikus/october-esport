@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Game
+
+# Model Form Field configuration
+form: $/kami/esport/models/game/fields.yaml
+
+# Model Class name
+modelClass: Kami\Esport\Models\Game
+
+# Default redirect location
+defaultRedirect: kami/esport/games
+
+# Create page
+create:
+    title: Create Game
+    redirect: kami/esport/games/update/:id
+    redirectClose: kami/esport/games
+
+# Update page
+update:
+    title: Edit Game
+    redirect: kami/esport/games
+    redirectClose: kami/esport/games
+
+# Preview page
+preview:
+    title: Preview Game

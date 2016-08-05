@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        placeholder: Type a game name...
+
+    slug:
+        label: Slug
+        placeholder: Type a game slug...
+
+    image:
+        label: Image
+        type: fileupload
+        mode: image
+        imageHeight: 50
+        imageWidth: 50

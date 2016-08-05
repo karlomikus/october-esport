@@ -1,0 +1,23 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        span: left
+
+    description:
+        label: Team description
+        type: markdown
+        size: huge
+        mode: split
+        span: left
+
+    image:
+        label: Opponent logo
+        type: fileupload
+        mode: image
+        imageWidth: 500
+        imageHeight: 500
+        span: right

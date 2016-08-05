@@ -1,0 +1,18 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    logo:
+        label: Logo
+        type: html
+        sortable: false
+        searchable: true
+
+    name:
+        label: Opponent name
+        searchable: true
+
+    description:
+        label: Description
+        searchable: false

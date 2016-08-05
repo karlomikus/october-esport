@@ -1,0 +1,30 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        span: left
+
+    game:
+        label: Game
+        type: relation
+        span: left
+
+    description:
+        label: Description
+        type: textarea
+        span: left
+
+    image:
+        label: Squad logo
+        type: fileupload
+        mode: image
+        imageWidth: 200
+        imageHeight: 200
+        span: left
+
+    members:
+        label: Members
+        type: relation

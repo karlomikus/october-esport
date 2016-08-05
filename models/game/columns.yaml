@@ -1,0 +1,29 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    logo:
+        label: Logo
+        type: html
+        searchable: false
+        sortable: false
+        width: 20px
+
+    name:
+        label: Name
+        searchable: true
+
+    slug:
+        label: Slug
+        searchable: true
+
+    created_at:
+        label: Created At
+        type: date
+        invisible: true
+
+    updated_at:
+        label: Updated At
+        type: date
+        invisible: true

@@ -1,0 +1,12 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+members:
+    label: Members
+    view:
+        list: $/rainlab/user/models/user/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        list: $/rainlab/user/models/role/columns.yaml
+        form: $/rainlab/user/models/role/fields.yaml

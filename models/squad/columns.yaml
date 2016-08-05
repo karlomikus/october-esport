@@ -1,0 +1,28 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Name
+        searchable: true
+
+    description:
+        label: Description
+        searchable: false
+        sortable: false
+
+    game:
+        label: Game
+        relation: game
+        select: name
+        searchable: true
+        sortable: false
+
+    members_count:
+        label: Members
+        type: number
+        relation: members_count
+        valueFrom: count
+        default: 0
+        sortable: false
