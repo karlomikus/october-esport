@@ -88,6 +88,7 @@ class Plugin extends PluginBase
                 'label'       => 'eSport',
                 'url'         => Backend::url('kami/esport/games'),
                 'icon'        => 'icon-trophy',
+                'iconSvg'     => 'plugins/kami/esport/assets/images/plugin-icon.svg',
                 'permissions' => ['kami.esport.*'],
                 'order'       => 500,
                 'sideMenu' => [
