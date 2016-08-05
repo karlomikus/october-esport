@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Match
+
+# Model Form Field configuration
+form: $/kami/esport/models/match/fields.yaml
+
+# Model Class name
+modelClass: Kami\Esport\Models\Match
+
+# Default redirect location
+defaultRedirect: kami/esport/matches
+
+# Create page
+create:
+    title: Create Match
+    redirect: kami/esport/matches/update/:id
+    redirectClose: kami/esport/matches
+
+# Update page
+update:
+    title: Edit Match
+    redirect: kami/esport/matches
+    redirectClose: kami/esport/matches
+
+# Preview page
+preview:
+    title: Preview Match

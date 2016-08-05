@@ -4,4 +4,6 @@
   - create_opponents_table.php
   - create_squads_table.php
   - create_squads_members_table.php
+  - create_matches_table.php
+  - create_matches_scores_table.php
   - seed_all_tables.php

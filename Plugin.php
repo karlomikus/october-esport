@@ -109,6 +109,12 @@ class Plugin extends PluginBase
                         'icon'        => 'icon-users',
                         'url'         => Backend::url('kami/esport/squads'),
                         'permissions' => ['kami.esport.*'],
+                    ],
+                    'matches' => [
+                        'label'       => 'Matches',
+                        'icon'        => 'icon-shield',
+                        'url'         => Backend::url('kami/esport/matches'),
+                        'permissions' => ['kami.esport.*'],
                     ]
                 ]
             ],
