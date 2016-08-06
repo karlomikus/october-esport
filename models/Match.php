@@ -11,6 +11,9 @@ use Kami\Esport\Models\MatchScore;
  */
 class Match extends Model
 {
+    const MATCH_LOST = 0;
+    const MATCH_WON = 1;
+    const MATCH_DRAW = 2;
 
     /**
      * @var string The database table used by the model.
@@ -27,7 +30,7 @@ class Match extends Model
      */
     protected $fillable = [];
 
-    public function getOutcomeAttribute()
+    public function matchOutcome()
     {
         $scores = $this->match_scores;
 
@@ -35,11 +38,28 @@ class Match extends Model
         $resultGuest = $scores->sum('guest');
 
         if ($resultHome > $resultGuest) {
-            return '<span class="score score-win">won</span>';
+            return self::MATCH_WON;
         } else if ($resultHome < $resultGuest) {
-            return '<span class="score score-lost">lost</span>';
+            return self::MATCH_LOST;
         } else {
-            return '<span class="score score-draw">draw</span>';
+            return self::MATCH_DRAW;
+        }
+    }
+
+    public function getOutcomeAttribute()
+    {
+        $outcome = $this->matchOutcome();
+
+        switch ($outcome) {
+            case self::MATCH_WON:
+                return '<span class="score score-win">won</span>';
+                break;
+            case self::MATCH_LOST:
+                return '<span class="score score-lost">lost</span>';
+                break;
+            default:
+                return '<span class="score score-draw">draw</span>';
+                break;
         }
     }
 
