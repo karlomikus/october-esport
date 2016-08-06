@@ -22,4 +22,11 @@ class Matches extends Controller
 
         BackendMenu::setContext('Kami.Esport', 'esport', 'matches');
     }
+
+    public function index()
+    {
+        $this->addCss('/plugins/kami/esport/assets/css/matches.css');
+
+        $this->asExtension('ListController')->index();
+    }
 }

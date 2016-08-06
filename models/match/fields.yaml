@@ -3,6 +3,39 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    squad:
+        label: Squad
+        type: relation
+        span: left
+
+    opponent:
+        label: Opponent
+        type: relation
+        span: left
+
+    game:
+        label: Game
+        type: relation
+        span: left
+
+    date:
+        label: Played on
+        type: datepicker
+        span: left
+
+    matchlink:
+        label: Match link
+        span: left
+
+    scores:
+        label: Scores
+        type: repeater
+        span: left
+        form:
+            fields:
+                score_home:
+                    label: Squad score
+                    type: number
+                score_guest:
+                    label: Opponent score
+                    type: number

@@ -66,12 +66,18 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
         return [
-            'kami.esport.some_permission' => [
-                'tab' => 'Esport',
-                'label' => 'Some permission'
+            'kami.esport.access_games' => [
+                'tab' => 'eSport',
+                'label' => 'Manage games'
+            ],
+            'kami.esport.access_opponents' => [
+                'tab' => 'eSport',
+                'label' => 'Manage opponents'
+            ],
+            'kami.esport.access_squads' => [
+                'tab' => 'eSport',
+                'label' => 'Manage squads'
             ],
         ];
     }
@@ -120,5 +126,4 @@ class Plugin extends PluginBase
             ],
         ];
     }
-
 }

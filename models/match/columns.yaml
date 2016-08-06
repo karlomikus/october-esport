@@ -3,6 +3,29 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
+    date:
+        label: Played on
+        type: datetime
         searchable: true
+        width: 15%
+
+    squad:
+        label: Squad
+        relation: squad
+        select: name
+
+    opponent:
+        label: Opponent
+        relation: opponent
+        select: name
+
+    game:
+        label: Game
+        relation: game
+        select: name
+
+    outcome:
+        label: Result
+        type: html
+        sortable: false
+        searchable: false
