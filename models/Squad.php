@@ -3,6 +3,7 @@
 use Model;
 use System\Models\File;
 use Kami\Esport\Models\Game;
+use Kami\Esport\Models\Match;
 use RainLab\User\Models\User;
 
 /**
@@ -38,7 +39,10 @@ class Squad extends Model
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [];
+    public $hasMany = [
+        'matches' => [Match::class],
+        'matches_count' => [Match::class, 'count' => true]
+    ];
     public $belongsTo = [
         'game' => Game::class
     ];

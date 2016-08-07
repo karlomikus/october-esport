@@ -26,3 +26,11 @@ columns:
         valueFrom: count
         default: 0
         sortable: false
+
+    matches_count:
+        label: Played matches
+        type: number
+        relation: matches_count
+        valueFrom: count
+        default: 0
+        sortable: false
