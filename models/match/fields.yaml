@@ -2,40 +2,47 @@
 #  Form Field Definitions
 # ===================================
 
-fields:
-    squad:
-        label: Squad
-        type: relation
-        span: left
+tabs:
+    stretch: true
+    fields:
+        squad:
+            tab: Match information
+            label: Squad
+            type: relation
+            span: left
 
-    opponent:
-        label: Opponent
-        type: relation
-        span: left
+        opponent:
+            tab: Match information
+            label: Opponent
+            type: relation
+            span: left
 
-    game:
-        label: Game
-        type: relation
-        span: left
+        game:
+            tab: Match information
+            label: Game
+            type: relation
+            span: left
 
-    date:
-        label: Played on
-        type: datepicker
-        span: left
+        date:
+            tab: Match information
+            label: Played on
+            type: datepicker
+            span: left
 
-    matchlink:
-        label: Match link
-        span: left
+        matchlink:
+            tab: Match information
+            label: Match link
+            span: left
 
-    scores:
-        label: Scores
-        type: repeater
-        span: left
-        form:
-            fields:
-                score_home:
-                    label: Squad score
-                    type: number
-                score_guest:
-                    label: Opponent score
-                    type: number
+        scores:
+            tab: Scores
+            label: ""
+            type: repeater
+            span: left
+            prompt: Add new score
+            form:
+                fields:
+                    home:
+                        label: Squad score
+                    guest:
+                        label: Opponent score

@@ -17,12 +17,14 @@ class MatchScore extends Model
     /**
      * @var array Guarded fields
      */
-    protected $guarded = ['*'];
+    protected $guarded = [];
+
+    public $timestamps = false;
 
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = ['*'];
     /**
      * @var array Relations
      */

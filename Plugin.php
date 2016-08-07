@@ -92,12 +92,18 @@ class Plugin extends PluginBase
         return [
             'esport' => [
                 'label'       => 'eSport',
-                'url'         => Backend::url('kami/esport/games'),
+                'url'         => Backend::url('kami/esport/matches'),
                 'icon'        => 'icon-trophy',
                 'iconSvg'     => 'plugins/kami/esport/assets/images/plugin-icon.svg',
                 'permissions' => ['kami.esport.*'],
                 'order'       => 500,
                 'sideMenu' => [
+                    'matches' => [
+                        'label'       => 'Matches',
+                        'icon'        => 'icon-shield',
+                        'url'         => Backend::url('kami/esport/matches'),
+                        'permissions' => ['kami.esport.*'],
+                    ],
                     'games' => [
                         'label'       => 'Games',
                         'icon'        => 'icon-gamepad',
@@ -114,12 +120,6 @@ class Plugin extends PluginBase
                         'label'       => 'Squads',
                         'icon'        => 'icon-users',
                         'url'         => Backend::url('kami/esport/squads'),
-                        'permissions' => ['kami.esport.*'],
-                    ],
-                    'matches' => [
-                        'label'       => 'Matches',
-                        'icon'        => 'icon-shield',
-                        'url'         => Backend::url('kami/esport/matches'),
                         'permissions' => ['kami.esport.*'],
                     ]
                 ]

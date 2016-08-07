@@ -1,4 +1,5 @@
-<?php namespace Kami\Esport\Models;
+<?php
+namespace Kami\Esport\Models;
 
 use Model;
 use Kami\Esport\Models\Game;
@@ -8,12 +9,31 @@ use Kami\Esport\Models\MatchScore;
 
 /**
  * Match Model
+ *
+ * @package Kami.Esport
+ * @author Karlo Mikuš <contact@karlomikus.com>
  */
 class Match extends Model
 {
+    use \October\Rain\Database\Traits\Validation;
+
     const MATCH_LOST = 0;
     const MATCH_WON = 1;
     const MATCH_DRAW = 2;
+
+    /** @var array Fake JSON scores for a repeater field */
+    protected $jsonable = ['scores'];
+
+    /*
+     * Validation
+     */
+    public $rules = [
+        'squad' => 'required',
+        'opponent' => 'required',
+        'game' => 'required',
+        'date' => 'required|date',
+        'matchlink' => 'url',
+    ];
 
     /**
      * @var string The database table used by the model.
@@ -30,6 +50,11 @@ class Match extends Model
      */
     protected $fillable = [];
 
+    /**
+     * Get the match outcome code
+     *
+     * @return int
+     */
     public function matchOutcome()
     {
         $scores = $this->match_scores;
@@ -46,6 +71,11 @@ class Match extends Model
         }
     }
 
+    /**
+     * Get human readable outcome for list display
+     *
+     * @return string
+     */
     public function getOutcomeAttribute()
     {
         $outcome = $this->matchOutcome();
@@ -61,6 +91,23 @@ class Match extends Model
                 return '<span class="score score-draw">draw</span>';
                 break;
         }
+    }
+
+    /**
+     * Get scores from relation
+     *
+     * @return string
+     */
+    public function getScoresAttribute()
+    {
+        return $this->match_scores->toJson();
+    }
+
+    /**
+     * We don't save any scores through this model
+     */
+    public function setScoresAttribute()
+    {
     }
 
     /**
@@ -81,5 +128,4 @@ class Match extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
-
 }
